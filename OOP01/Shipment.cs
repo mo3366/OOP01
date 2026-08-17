@@ -6,6 +6,6 @@ namespace OOP01
 {
     internal class Shipment
     {
-        public string
+        
     }
 }

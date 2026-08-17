@@ -4,16 +4,36 @@ using System.Text;
 
 namespace OOP01
 {
-    #region Part 01 : Theoretical Questions - Question 1
+    #region 1. Create a DeliveryAddress struct 
     public struct DeliveryAddress
     {
-        public string City;
-        public string Street;
+       public string City;
+       public string Street;
+       public int BuildingNumber;
+
+        public DeliveryAddress(string city, string street, int buildingNumber)
+        {
+            City = city;
+            Street = street;
+            BuildingNumber = buildingNumber;
+        }
+        public string GetFullAddress()
+        {
+            return $"{BuildingNumber} {Street} Street, {City}";
+        }
     }
-    public class Customer
-    {
-        public string Name;
-    }
+    #endregion
+
+    #region Part 01 : Theoretical Questions - Question 1
+    //public struct DeliveryAddress
+    //{
+    //    public string City;
+    //    public string Street;
+    //}
+    //public class Customer
+    //{
+    //    public string Name;
+    //}
     //a) What happens when a DeliveryAddress variable is copied into another variable and the copy is modified?
     // answer:DeliveryAddress is a struct  which is a value type  When you assign one DeliveryAddress variable
     // to another the entire contents are copied into a brand-new memory location
