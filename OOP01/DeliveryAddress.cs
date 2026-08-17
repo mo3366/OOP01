@@ -24,4 +24,16 @@ namespace OOP01
     // the reference (the memory address), so both variables end up pointing to the same object. Modifying a field through
     // either variable changes the one shared object so the change is visible through both.
     #endregion
+
+    #region Part 01 : Theoretical Questions - Question 2
+    //a) a) Identify at least three problems with this design from an encapsulation perspective.
+    // answer: 1- The fields are public, which means they can be accessed and modified directly from outside the class.
+    // 2- There is no validation or control over how the fields are set or retrieved.
+    // 3- The internal state of the object can be changed in unexpected ways, leading to potential inconsistencies.
+
+    //b) b) How can private fields and public properties improve this design?
+    // answer: we can control how the fields are accessed and modified. This allows
+    // us to add validation logic, ensure data integrity, and provide a clear interface for interacting with the object's state.
+    #endregion
+
 }
