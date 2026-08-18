@@ -116,5 +116,28 @@ namespace OOP01
 
         #endregion
 
+
+        #region 3. Add the following methods to Shipment
+
+        public void UpdateDeliveryFee(decimal newFee)
+        {
+            if (newFee > 0)
+            {
+                DeliveryFee = (double)newFee;
+            }
+        }
+
+        public void PrintShipment()
+        {
+            Console.WriteLine("Shipment Information:");
+            Console.WriteLine($"Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight}");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee}");
+            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost}");
+        }
+        #endregion
+
     }
 }
